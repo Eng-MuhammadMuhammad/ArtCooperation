@@ -1,0 +1,112 @@
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+
+  .mainHeading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .mainHeading h2 {
+    font-size: 36px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+  }
+  
+  .mainHeading p {
+    font-size: 18px;
+    color: #777;
+  }
+  
+  /* Center shuffle list */
+  .shuffle {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Shuffle list items */
+  .shuffle li {
+    padding: 10px;
+  }
+  
+  /* Active item styling */
+  .shuffle li.active {
+    background-color: var(--main-color);
+    color: white;
+  }
+  
+  /* Container for images */
+  .imgsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+  
+  /* Individual image box styling */
+  .box {
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+  }
+  
+  .box:hover .caption {
+    bottom: 0;
+  }
+  
+  .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+  }
+  
+  /* Responsive layouts */
+  @media (min-width: 768px) {
+    .box {
+      flex-basis: 50%;
+    }
+  }
+  
+  @media (min-width: 1199px) {
+    .box {
+      flex-basis: 25%;
+    }
+  }
+  
+  .box img {
+    max-width: 100%;
+    transition: 0.3s;
+  }
+  
+  /* Caption styling */
+  .caption {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    transition: bottom 0.3s;
+    bottom: -100%;
+  }
+  
+  /* Caption heading */
+  .caption h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  /* Caption paragraph */
+  .caption p {
+    color: var(--main-color);
+  }
+  
+  /* More button styling */
+  .more {
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
