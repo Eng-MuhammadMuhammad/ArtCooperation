@@ -1,16 +1,18 @@
 import React from 'react';
 import styles from './Footer.module.css'; 
 
+import logophoto from '../../assets/images/logo.png'
+
 const Footer = () => {
   // Get the current month and year
   const date = new Date();
   const month = date.toLocaleString('default', { month: 'long' }); 
-  const year = date.getFullYear(); // Get the full year
+  const year = date.getFullYear(); 
   
   return (
     <div className={styles.footer}>
       <div className={styles.container}>
-        <img src="images/logo.png" alt="Logo" />
+        <img src={logophoto} alt="Logo" />
         <p>We Are Social</p>
         <div className={styles.socialIcons}>
           <i className="fab fa-facebook-f"></i>

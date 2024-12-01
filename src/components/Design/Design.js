@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./Design.module.css"; 
 
+import mobilephoto from '../../assets/images/mobile.png'
+
 const Design = () => {
   return (
     <div className={styles.design}>
       <div className={styles.overlay}></div>
       <div className={styles.image}>
-        <img src="images/mobile.png" alt="Mobile" />
+        <img src={mobilephoto} alt="Mobile" />
       </div>
       <div className={styles.text}>
         <h2>Our Design Comes With...</h2>

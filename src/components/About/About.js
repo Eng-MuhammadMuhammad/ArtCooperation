@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./About.module.css";
 
+import aboutphoto from '../../assets/images/about.png'
+
 const About = () => {
   return (
     <div className={styles.about}>
@@ -18,7 +20,7 @@ const About = () => {
           </p>
         </div>
         <img
-          src="images/about.png"
+          src={aboutphoto}
           alt="About Us"
           className={styles.aboutImage}
         />

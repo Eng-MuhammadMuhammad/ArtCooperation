@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ArtCooperation/static/css/main.61dfe417.css",
+    "main.js": "/ArtCooperation/static/js/main.7ace54e0.js",
+    "static/media/stats.png": "/ArtCooperation/static/media/stats.a508b84400efad055f18.png",
+    "static/media/subscribe.jpg": "/ArtCooperation/static/media/subscribe.1e24fcea5980ced232ec.jpg",
+    "static/media/landing.jpg": "/ArtCooperation/static/media/landing.15c0fabc946b186ba9ff.jpg",
+    "static/media/design-features.jpg": "/ArtCooperation/static/media/design-features.f62b2e28d39b5c35c9c4.jpg",
+    "static/media/quote.jpg": "/ArtCooperation/static/media/quote.429d009ecb9a02e9b317.jpg",
+    "index.html": "/ArtCooperation/index.html",
+    "main.61dfe417.css.map": "/ArtCooperation/static/css/main.61dfe417.css.map",
+    "main.7ace54e0.js.map": "/ArtCooperation/static/js/main.7ace54e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61dfe417.css",
+    "static/js/main.7ace54e0.js"
+  ]
+}

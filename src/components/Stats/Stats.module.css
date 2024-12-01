@@ -3,7 +3,7 @@
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
     text-align: center;
-    background-image: url("/public/images/stats.png");
+    background-image: url("../../assets/images/stats.png");
     background-size: cover;
     position: relative;
   }

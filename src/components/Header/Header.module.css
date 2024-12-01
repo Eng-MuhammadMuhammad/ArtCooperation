@@ -1,95 +1,120 @@
 /* Start Header */
 .header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 97px;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: #a2a2a2;
+  bottom: 0;
+  width: calc(100% - 30px);
+  left: 15px;
+}
+
+.logoImage {
+  height: 40px;
+  padding-left: 30px;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* This rule ensures the toggle menu is hidden on large screens */
+.toggleMenu {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: none; /* Hidden by default on large screens */
+}
+
+@media (max-width: 767px) {
+  /* This ensures the toggle menu is only shown on small screens */
+  .toggleMenu {
+    display: block; /* Display the toggle on small screens */
+  }
+  
+
+  .navList {
+    display: none;
+    flex-direction: column;
     position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
-    z-index: 2;
+    background-color: rgb(0 0 0 / 50%);
+    z-index: 1;
+    opacity: 0; /* Start with an invisible menu */
+    visibility: hidden; /* Hide the menu when not open */
+    transform: translateY(-20px); /* Slide the menu out of view */
+    transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease;
   }
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    min-height: 97px;
+
+  .navList.show {
+    display: flex; /* Show the menu when the 'show' class is added */
+    opacity: 1;
+    visibility: visible; /* Ensure it's visible */
+    transform: translateY(0); /* Slide into view */
+    transition: opacity 0.3s ease, visibility 0s 0s, transform 0.3s ease;
   }
-  .container::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    background-color: #a2a2a2;
-    bottom: 0;
-    width: calc(100% - 30px);
-    left: 15px;
-  }
-  .logoImage {
-    height: 40px;
-    padding-left: 30px;
-  }
-  .nav {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .toggleMenu {
-    color:white;
-    font-size: 22px;
-  }
-  @media (min-width: 768px) {
-    .toggleMenu {
-      display: none;
-    }
-  }
-  .navList {
-    display: flex;
-  }
-  @media (max-width: 767px) {
-    .navList {
-      display: none;
-    }
-    .toggleMenu:hover + .navList {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: rgb(0 0 0 / 50%);
-    }
-    .navLink {
-      padding: 15px !important;
-    }
-  }
+
   .navLink {
-    padding: 40px 10px;
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-    position: relative;
-    z-index: 2;
+    padding: 15px 30px;
   }
-  .active,
-  .navLink:hover {
-    color: var(--main-color);
-    border-bottom: 1px solid var(--main-color);
-  }
-  .form {
-    width: 40px;
-    height: 30px;
-    position: relative;
-    margin-left: 30px;
-    margin-right: 30px;
-    border-left: 1px solid white;
-  }
-  .form i {
-    color: white;
-    position: absolute;
-    font-size: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-  }
-  /* End Header */
-  
+}
+
+.navList {
+  display: flex;
+}
+
+.navLink {
+  padding: 40px 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.active,
+.navLink:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+.form {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-left: 1px solid white;
+}
+
+.form i {
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+/* End Header */

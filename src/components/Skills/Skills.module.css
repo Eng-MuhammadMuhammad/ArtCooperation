@@ -1,137 +1,186 @@
 /* Start Skills */
 .ourSkills {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
-  }
-  
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* Container: Two columns on larger screens */
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 200px;
+}
+
+@media (max-width: 992px) {
   .container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 200px 0 200px;
+    padding: 0 40px; /* Reduce padding on tablets/small screens */
   }
-  
-  @media (min-width: 992px) {
-    .container > div {
-      flex-basis: 45%;
-    }
+}
+
+@media (min-width: 992px) {
+  .container > div {
+    flex-basis: 48%; /* Two-column layout on larger screens */
+    margin-bottom: 30px; /* Space between sections */
   }
-  
-  .container > div > h3 {
-    margin: 0 0 30px;
-    font-weight: normal;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  
-  .container > div > p {
-    color: #777;
-    line-height: 2;
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  /* Testimonials Section */
+}
+
+/* Section Heading */
+.container > div > h3 {
+  margin: 0 0 30px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container > div > p {
+  color: #777;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Testimonials Section */
+.testimonials .content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.testimonials .content img {
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.testimonials .content .text {
+  line-height: 1.8;
+  padding: 10px;
+  border-left: 2px solid #ccc;
+}
+
+.testimonials .content p {
+  color: #777;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.bullets li {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.bullets .active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+/* Mobile adjustments for testimonials */
+@media (max-width: 767px) {
   .testimonials .content {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonials .content img {
+    margin: 0 auto 20px;
+    width: 100px;
+  }
+
+  .testimonials .content .text {
+    border-left: none;
+    padding-top: 10px;
+  }
+
+  .testimonials h3, .testimonials p {
+    text-align: center;
     margin-bottom: 30px;
   }
-  
-  .testimonials .content img {
-    width: 100px;
-    border-radius: 50%;
-    margin-right: 50px;
-  }
-  
-  @media (max-width: 767px) {
-    .testimonials .content {
-      flex-direction: column;
-      text-align: center;
-    }
-    .testimonials .content img {
-      margin: 0 auto 20px;
-    }
-  }
-  
-  .text {
-    line-height: 1.8;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .text p {
-    color: #777;
-    text-align: right;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
+
+  /* Center the bullet points for pagination on mobile */
   .bullets {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
-  
-  .bullets li {
-    width: 14px;
-    height: 14px;
-    border: 1px solid #aaa;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .bullets .active {
-    background-color: var(--main-color);
-    border-color: var(--main-color);
-  }
-  
-  /* Skills Section */
+}
+
+/* Skills Section */
+.skills .progHolder {
+  margin-bottom: 30px;
+}
+
+.progHolder h4 {
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.prog {
+  background-color: #dedadc;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.prog span {
+  display: block;
+  background-color: #00bfff; /* Light blue color */
+  height: 100%;
+  position: relative;
+  border-radius: 4px;
+}
+
+.prog span::before {
+  content: attr(data-progress);
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: -30px;
+  right: 0;
+  padding: 4px 0;
+  width: 50px;
+  text-align: center;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+/* Responsive layout for skills section */
+@media (max-width: 767px) {
   .skills .progHolder {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
-  
+
   .progHolder h4 {
-    margin-bottom: 15px;
-    font-weight: normal;
-    text-transform: uppercase;
+    font-size: 16px; /* Slightly smaller font on mobile */
   }
-  
+
   .prog {
-    background-color: #dedadc;
-    height: 30px;
+    height: 18px; /* Smaller height for progress bars */
   }
-  
-  .prog span {
-    display: block;
-    background-color: #00bfff; /* Light blue color */
-    height: 100%;
-    position: relative;
-    border-radius: 4px;
-  }
-  
+
   .prog span::before {
-    content: attr(data-progress);
-    position: absolute;
-    background-color: black;
-    color: white;
-    top: -40px;
-    right: -18px;
-    padding: 4px 0;
-    width: 40px;
+    font-size: 10px;
+    top: -25px; /* Adjust position for smaller screens */
+    width: 30px; /* Smaller width for percentage text */
+  }
+
+  /* Center text for skills on mobile */
+  .skills h3, .skills p {
     text-align: center;
-    font-size: 12px;
-    border-radius: 4px;
+    margin-bottom: 30px;
   }
-  
-  .prog span::after {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-width: 8px;
-    border-color: black transparent transparent;
-    right: -8px;
-    top: -15px;
-  }
-  /* End Skills */
-  
+}
+

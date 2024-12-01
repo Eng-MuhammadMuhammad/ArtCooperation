@@ -1,5 +1,8 @@
 import React from "react";
-import styles from "./Skills.module.css"; // Importing CSS module
+import styles from "./Skills.module.css";
+
+import skillsphoto1 from '../../assets/images/skills-01.jpg'
+import skillsphoto2 from '../../assets/images/skills-02.jpg'
 
 const Skills = () => {
   return (
@@ -13,7 +16,7 @@ const Skills = () => {
             "Our clients' success stories speak volumes. Here's what they have to say about working with us."
           </p>
           <div className={styles.content}>
-            <img src="images/skills-01.jpg" alt="User Testimonial" />
+            <img src={skillsphoto1} alt="User Testimonial" />
             <div className={styles.text}>
               "Working with this team was a game-changer. Their expertise and dedication helped us achieve our project goals ahead of schedule."
               <p>Sarah Lee, Project Manager</p>
@@ -21,7 +24,7 @@ const Skills = () => {
           </div>
           
           <div className={styles.content}>
-            <img src="images/skills-02.jpg" alt="User Testimonial" />
+            <img src={skillsphoto2} alt="User Testimonial" />
             <div className={styles.text}>
               "Exceptional service and attention to detail. They went above and beyond to ensure our satisfaction."
               <p>Mike Johnson, CEO</p>
@@ -29,7 +32,7 @@ const Skills = () => {
           </div>
           
           <div className={styles.content}>
-            <img src="images/skills-01.jpg" alt="User Testimonial" />
+            <img src={skillsphoto1} alt="User Testimonial" />
             <div className={styles.text}>
               "Working with this team was a game-changer. Their expertise and dedication helped us achieve our project goals ahead of schedule."
               <p>Sarah Lee, Project Manager</p>

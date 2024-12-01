@@ -1,32 +1,72 @@
 /* Start Quote */
 .quote {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
-    background-image: url("/public/images/quote.jpg"); 
-    background-size: cover;
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  
-  .quote::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75); /* 75% opacity */
-  }
-  
-  .container {
-    position: relative;
-  }
-  
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url("../../assets/images/quote.jpg"); 
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+  background-position: center; /* Ensure the background image is centered */
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* 75% opacity */
+}
+
+.container {
+  position: relative;
+  padding: 0 20px; /* Add some padding on smaller screens */
+}
+
+.container q {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 1.5;
+}
+
+.container span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .container q {
-    font-size: 30px;
-    margin-bottom: 20px;
-    display: block;
+      font-size: 24px; /* Smaller font size for mobile screens */
+      margin-bottom: 15px;
   }
-  /* End Quote */
-  
+
+  .container span {
+      font-size: 18px; /* Adjust the author's font size */
+  }
+
+  .quote {
+      padding-top: 40px; /* Adjust top padding for mobile */
+      padding-bottom: 40px; /* Adjust bottom padding for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .container q {
+      font-size: 20px; /* Even smaller font size for very small screens */
+      margin-bottom: 10px;
+  }
+
+  .container span {
+      font-size: 16px; /* Adjust the author's font size */
+  }
+
+  .quote {
+      padding-top: 30px; /* Adjust top padding for very small screens */
+      padding-bottom: 30px; /* Adjust bottom padding for very small screens */
+  }
+}
+/* End Quote */

@@ -1,68 +1,105 @@
 .services {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.mainHeading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mainHeading h2 {
+  font-size: 36px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.mainHeading p {
+  font-size: 18px;
+  color: #777;
+}
+
+.servicesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+  grid-gap: 40px 60px; /* Column and row gap */
+}
+
+.srvBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon {
+  margin-bottom: 20px;
+  font-size: 3rem; /* Ensure icons are large enough */
+}
+
+.text h3 {
+  margin-bottom: 20px;
+  color: var(--main-color);
+}
+
+.text p {
+  line-height: 1.8;
+  color: #777;
+}
+
+/* Tablet and larger devices */
+@media (min-width: 768px) {
+  .servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* Responsive grid with columns that adjust based on screen size */
+    grid-column-gap: 40px;
+    grid-row-gap: 60px;
   }
-  
-  .mainHeading {
-    text-align: center;
+
+  .icon {
+    font-size: 3.5rem; /* Slightly larger icons for tablet and above */
+  }
+
+  .mainHeading h2 {
+    font-size: 40px; /* Larger heading for tablets and above */
+  }
+
+  .mainHeading p {
+    font-size: 20px; /* Larger paragraph font for tablets and above */
+  }
+}
+
+/* Mobile devices (below 768px) */
+@media (max-width: 767px) {
+  .servicesContainer {
+    grid-template-columns: 1fr; /* One column for small screens */
+    grid-gap: 20px 40px; /* Reduced gap for mobile */
+  }
+
+  .srvBox {
     margin-bottom: 40px;
   }
-  
-  .mainHeading h2 {
-    font-size: 36px;
-    color: var(--main-color);
-    margin-bottom: 20px;
-  }
-  
-  .mainHeading p {
-    font-size: 18px;
-    color: #777;
-  }
-  
-  @media (min-width: 768px) {
-    .servicesContainer {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-      grid-column-gap: 40px;
-      grid-row-gap: 60px;
-    }
-  }
-  
-  .servicesContainer { 
-    display: grid; 
-    flex-wrap: wrap;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */ 
-    grid-gap: 40px 60px; /* Column and row gap */ 
-    }
-  
-  .srvBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
+
   .icon {
-    margin-bottom: 20px;
+    margin: 0 0 30px;
+    font-size: 2.5rem; /* Slightly smaller icons for mobile */
   }
-  
+
   .text h3 {
-    margin-bottom: 20px;
-    color: var(--main-color);
+    font-size: 22px; /* Smaller heading for mobile */
+    margin-bottom: 15px;
   }
-  
+
   .text p {
-    line-height: 1.8;
+    font-size: 16px; /* Smaller paragraph font for mobile */
     color: #777;
   }
-  
-  @media (max-width: 767px) {
-    .srvBox {
-      margin-bottom: 40px;
-    }
-  
-    .icon {
-      margin: 0 0 30px;
-    }
+
+  .mainHeading h2 {
+    font-size: 30px; /* Adjusted heading size for mobile */
   }
-  
+
+  .mainHeading p {
+    font-size: 16px; /* Adjusted paragraph size for mobile */
+  }
+}
